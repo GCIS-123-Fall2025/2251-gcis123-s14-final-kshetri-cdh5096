@@ -54,6 +54,7 @@ class Item:
 def main():
   item1 = Item("ABCD-1234", "Silky Camisole", 24)
   item2 = Item("EFGH-5678", "Grapes", 8)
+  item3 = Item("ABCD-1234", "Milk", 12)
   items = [item1, item2]
   dictionary = {}
   for item in items: # hashable test
@@ -63,7 +64,8 @@ def main():
   name = item1.get_name()
   price = item1.get_price()
   print(code, name, price) # accessors test
-  print(item1 == item2) # equality test
+  print(item1 == item2) # equality tests
+  print(item1 == item3)
   print(items) # __repr__ test
   items.sort() # sortable test
   print(items)
