@@ -31,7 +31,7 @@ def balance_parenthesis(a_string):
         character = a.pop()
         if character == "(":
             balance += 1
-            if balance > 0:
+            if balance > 0 and a.is_empty():
                 return i
         elif character == ")":
             balance -= 1
