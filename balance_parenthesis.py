@@ -18,12 +18,10 @@ Examples:
 "-----() -- ( () )" returns 0
 
 """
-# from node_stack import Stack
 
 from node_stack import *
 
 def balance_parenthesis(a_string):
-    # stack = Stack()
     a = Stack()
     balance = 0
     for character in a_string:

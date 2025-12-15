@@ -24,17 +24,17 @@ For credit your function must use a stack or a queue in a significant way.
 
 def even_digits(integer):
     a = Stack()
-    integer = str(integer) # couldn't figure out how to split integer into individual digits without converting
+    integer = str(integer) # I couldn't figure out how to iterate over integer or split integer into individual digits without converting to a string
     for digit in integer:
         if int(digit) % 2 == 0:
             a.push(digit)
     if a.is_empty():
         a.push(0)
-    print(a)
-    while not a.is_empty(): # supposed to loop until stack is empty, but for some reason only takes one value from the stack
-        digit = a.pop()
-        evens_string = ""
-        evens_string += str(digit)
+    evens_string = ""
+    while not a.is_empty():
+        digit = a.pop() 
+        print(a)
+        evens_string = str(digit) + evens_string
     return int(evens_string)
 
 print(even_digits(1234567890))
