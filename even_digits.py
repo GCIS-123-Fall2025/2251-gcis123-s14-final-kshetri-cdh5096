@@ -1,4 +1,4 @@
-import node_stack
+from node_stack import Stack
 
 """
 Course: GCIS 123 (2251)
@@ -23,11 +23,21 @@ For credit your function must use a stack or a queue in a significant way.
 """
 
 def even_digits(integer):
-    pass # please replace with your solution
+    a = Stack()
+    integer = str(integer) # couldn't figure out how to split integer into individual digits without converting
+    for digit in integer:
+        if int(digit) % 2 == 0:
+            a.push(digit)
+    if a.is_empty():
+        a.push(0)
+    print(a)
+    while not a.is_empty(): # supposed to loop until stack is empty, but for some reason only takes one value from the stack
+        digit = a.pop()
+        evens_string = ""
+        evens_string += str(digit)
+    return int(evens_string)
 
-
-
-
+print(even_digits(1234567890))
 
 # several test cases provided for even digits - 1, 2, 34, 1234567890
 def test_even_digits_1():
